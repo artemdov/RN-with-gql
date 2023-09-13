@@ -30,6 +30,7 @@ export const HomeStackNavigator = () => {
       <HomeStack.Screen
         options={{
           ...commonOptions,
+          headerTitleAlign: 'center',
           headerTransparent: true,
           headerLeft: () => (
             <TouchableOpacity accessibilityRole={'button'} onPress={EMPTY_FUNCTION}>
