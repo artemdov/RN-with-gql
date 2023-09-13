@@ -19,6 +19,7 @@ type HomeScreenStyles = {
 export const homeScreenStyles = StyleSheet.create<HomeScreenStyles>({
   rootContainer: {
     flex: 1,
+    marginTop: 90,
     paddingHorizontal: 20,
   },
   secondWrapper: {

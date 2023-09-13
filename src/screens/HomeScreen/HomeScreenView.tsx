@@ -65,6 +65,4 @@ export const HomeScreenView: FC<HomeScreenViewProps> = (props) => {
         <CustomButton buttonText={participateText} />
       </View>
     </View>);
-
-
 };
