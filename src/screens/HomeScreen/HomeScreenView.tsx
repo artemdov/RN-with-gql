@@ -58,7 +58,7 @@ export const HomeScreenView: FC<HomeScreenViewProps> = (props) => {
           </View>
           <View>
             <MicroPhonesIcon style={homeScreenStyles.contentContainer} />
-            <NotificationComponent countWrapperStyles={{ right: 126 }} notificationsCount={12} />
+            <NotificationComponent countWrapperStyles={{ right: 12 }} notificationsCount={12} />
             <Text style={homeScreenStyles.text}>{microPhoneText}</Text>
           </View>
         </View>
