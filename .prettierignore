@@ -1,0 +1,14 @@
+.*ignore
+.bundle
+.cache
+.editorconfig
+.git
+.husky
+.idea
+.jest
+android
+coverage
+ios
+node_modules
+package-lock.json
+yarn.lock
