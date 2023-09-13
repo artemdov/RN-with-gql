@@ -11,7 +11,7 @@ export const RootNavigation = () => {
 
   return (
     <NavigationContainer ref={navigationRef}>
-      {!isAuthorized ? <BottomTabNavigator /> : <AuthNativeStackNavigator />}
+      {!!isAuthorized ? <BottomTabNavigator /> : <AuthNativeStackNavigator />}
     </NavigationContainer>
   );
 };
