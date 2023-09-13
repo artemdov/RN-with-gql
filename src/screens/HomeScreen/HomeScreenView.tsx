@@ -8,11 +8,9 @@ import MacIcon from '../../assets/firstRectangle.svg';
 import PhoneIcon from '../../assets/secondRectangle.svg';
 import MicroPhonesIcon from '../../assets/thirdRectangle.svg';
 import Separator from '../../assets/Separator.svg';
-
-
 import { startDrawText, startDrawTodayText } from '../../constants/texts';
 import { Chip } from '../../components/Chip';
-import { COLORS } from '../../constants/colors';
+import { NotificationComponent } from '../../components/NotificationComponent';
 
 
 export const HomeScreenView: FC<HomeScreenViewProps> = (props) => {
@@ -38,10 +36,14 @@ export const HomeScreenView: FC<HomeScreenViewProps> = (props) => {
         <Text style={homeScreenStyles.text}>{startDrawTodayText}</Text>
         <QuestionIcon />
       </View>
-
-      {/*<MacIcon />*/}
-      {/*<PhoneIcon />*/}
-      {/*<MicroPhonesIcon />*/}
+      <View style={homeScreenStyles.contentWrapper}>
+        <MacIcon style={homeScreenStyles.contentContainer} />
+        <NotificationComponent notificationsCount={3}/>
+        <PhoneIcon style={homeScreenStyles.contentContainer} />
+        <NotificationComponent countWrapperStyles={{left: 86}} notificationsCount={1}/>
+        <MicroPhonesIcon style={homeScreenStyles.contentContainer} />
+        <NotificationComponent countWrapperStyles={{right: 126}} notificationsCount={12}/>
+      </View>
     </View>
   </View>;
 
