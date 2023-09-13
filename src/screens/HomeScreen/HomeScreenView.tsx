@@ -10,7 +10,7 @@ import MicroPhonesIcon from '../../assets/thirdRectangle.svg';
 import Separator from '../../assets/Separator.svg';
 
 
-import { startDrawText } from '../../constants/texts';
+import { startDrawText, startDrawTodayText } from '../../constants/texts';
 import { Chip } from '../../components/Chip';
 import { COLORS } from '../../constants/colors';
 
@@ -33,6 +33,10 @@ export const HomeScreenView: FC<HomeScreenViewProps> = (props) => {
         <Separator style={homeScreenStyles.separator} />
         <Chip textStyles={textStyles} containerStyles={containerStyles} text={'3'} />
         <Chip textStyles={textStyles} containerStyles={containerStyles} text={'5'} />
+      </View>
+      <View style={homeScreenStyles.drawWrapper}>
+        <Text style={homeScreenStyles.text}>{startDrawTodayText}</Text>
+        <QuestionIcon />
       </View>
 
       {/*<MacIcon />*/}
