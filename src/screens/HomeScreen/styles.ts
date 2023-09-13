@@ -3,40 +3,41 @@ import { COLORS } from '../../constants/colors';
 
 
 type HomeScreenStyles = {
-  firstWrapper: ViewStyle;
-  secondWrapper: ViewStyle;
-  rootContainer: ViewStyle;
-  content: ViewStyle;
-  text: TextStyle;
-  drawWrapper: ViewStyle;
-  chipWrapper: ViewStyle;
-  separator: ViewStyle;
+  button: ViewStyle;
   chipItem: ViewStyle;
+  chipWrapper: ViewStyle;
+  content: ViewStyle;
   contentContainer: ViewStyle
   contentWrapper: ViewStyle;
+  drawWrapper: ViewStyle;
+  firstWrapper: ViewStyle;
+  rootContainer: ViewStyle;
+  secondWrapper: ViewStyle;
+  separator: ViewStyle;
+  text: TextStyle;
 };
 
 export const homeScreenStyles = StyleSheet.create<HomeScreenStyles>({
   rootContainer: {
+    backgroundColor: COLORS.DARK_GRAY,
     flex: 1,
-    marginTop: 90,
-    paddingHorizontal: 20,
+    paddingTop: 80,
   },
   secondWrapper: {
     backgroundColor: COLORS.DARK_GRAY,
     position: 'absolute',
-    bottom: 100,
-    right: 60,
-    transform: [{ rotate: '45deg' }],
+    bottom: 80,
+    right: 170,
+    transform: [{ rotate: '35deg' }],
     justifyContent: 'center',
     alignItems: 'center',
   },
   firstWrapper: {
     backgroundColor: COLORS.VIOLET,
     position: 'absolute',
-    top: 100,
-    left: 60,
-    transform: [{ rotate: '45deg' }],
+    top: 80,
+    left: 140,
+    transform: [{ rotate: '35deg' }],
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -50,7 +51,7 @@ export const homeScreenStyles = StyleSheet.create<HomeScreenStyles>({
     fontSize: 14,
     fontWeight: '600',
     marginEnd: 22,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   drawWrapper: {
     paddingVertical: 24,
@@ -73,7 +74,14 @@ export const homeScreenStyles = StyleSheet.create<HomeScreenStyles>({
     marginBottom: 5,
   },
   contentWrapper: {
+    alignItems: 'center',
     flexDirection: 'row',
+    justifyContent: 'center',
     marginBottom: 100,
+    marginStart: 20,
+  },
+  button: {
+    marginHorizontal: 20,
+    marginBottom: 10,
   },
 });

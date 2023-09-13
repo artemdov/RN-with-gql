@@ -15,7 +15,6 @@ import { EMPTY_STRING } from '../../constants/fallbacks';
 
 const commonOptions = {
   tabBarStyle: {
-    height: 90,
     paddingHorizontal: 10,
     paddingTop: 10,
   },
