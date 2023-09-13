@@ -5,5 +5,6 @@ export enum COLORS {
   BLACK = '#000000',
   RED_ERROR = '#ee1212',
   PURPLE = '#FF00B8',
-  DARK_GRAY = '#393E5D'
+  VIOLET = '#9E00FF',
+  DARK_GRAY = '#393E5D',
 }
