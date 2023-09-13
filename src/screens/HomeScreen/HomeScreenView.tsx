@@ -38,11 +38,11 @@ export const HomeScreenView: FC<HomeScreenViewProps> = (props) => {
       </View>
       <View style={homeScreenStyles.contentWrapper}>
         <MacIcon style={homeScreenStyles.contentContainer} />
-        <NotificationComponent notificationsCount={3}/>
+        <NotificationComponent notificationsCount={3} />
         <PhoneIcon style={homeScreenStyles.contentContainer} />
-        <NotificationComponent countWrapperStyles={{left: 86}} notificationsCount={1}/>
+        <NotificationComponent countWrapperStyles={{ left: 86 }} notificationsCount={1} />
         <MicroPhonesIcon style={homeScreenStyles.contentContainer} />
-        <NotificationComponent countWrapperStyles={{right: 126}} notificationsCount={12}/>
+        <NotificationComponent countWrapperStyles={{ right: 126 }} notificationsCount={12} />
       </View>
     </View>
   </View>;
