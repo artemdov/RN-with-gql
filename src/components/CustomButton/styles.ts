@@ -18,11 +18,12 @@ export const getCustomButtonStyles = () => {
       lineHeight: 24,
     },
     container: {
-      backgroundColor: COLORS.PURPLE,
       alignItems: 'center',
+      backgroundColor: COLORS.PURPLE,
       borderRadius: 20,
       height: 48,
       justifyContent: 'center',
+      width: '100%',
     },
     disabledStyle: {
       backgroundColor: COLORS.GRAY,

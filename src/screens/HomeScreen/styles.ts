@@ -19,6 +19,7 @@ type HomeScreenStyles = {
 export const homeScreenStyles = StyleSheet.create<HomeScreenStyles>({
   rootContainer: {
     flex: 1,
+    paddingHorizontal: 20,
   },
   secondWrapper: {
     backgroundColor: COLORS.DARK_GRAY,
@@ -48,6 +49,7 @@ export const homeScreenStyles = StyleSheet.create<HomeScreenStyles>({
     fontSize: 14,
     fontWeight: '600',
     marginEnd: 22,
+    textAlign: 'center'
   },
   drawWrapper: {
     paddingVertical: 24,
@@ -67,8 +69,10 @@ export const homeScreenStyles = StyleSheet.create<HomeScreenStyles>({
   },
   contentContainer: {
     marginEnd: 20,
+    marginBottom: 5,
   },
   contentWrapper: {
     flexDirection: 'row',
+    marginBottom: 100,
   },
 });

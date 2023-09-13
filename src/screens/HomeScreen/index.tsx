@@ -8,5 +8,10 @@ export const HomeScreen = () => {
   const containerStyles = { backgroundColor: COLORS.PURPLE };
   const textStyles = { color: COLORS.WHITE };
 
-  return <HomeScreenView textStyles={textStyles} containerStyles={containerStyles} width={width} height={height} />;
+  return <HomeScreenView
+    containerStyles={containerStyles}
+    height={height}
+    textStyles={textStyles}
+    width={width}
+  />;
 };
