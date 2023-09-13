@@ -12,6 +12,8 @@ type HomeScreenStyles = {
   chipWrapper: ViewStyle;
   separator: ViewStyle;
   chipItem: ViewStyle;
+  contentContainer: ViewStyle
+  contentWrapper: ViewStyle;
 };
 
 export const homeScreenStyles = StyleSheet.create<HomeScreenStyles>({
@@ -61,6 +63,12 @@ export const homeScreenStyles = StyleSheet.create<HomeScreenStyles>({
     marginHorizontal: 6,
   },
   chipItem: {
-    backgroundColor: COLORS.PURPLE
-  }
+    backgroundColor: COLORS.PURPLE,
+  },
+  contentContainer: {
+    marginEnd: 20,
+  },
+  contentWrapper: {
+    flexDirection: 'row',
+  },
 });
