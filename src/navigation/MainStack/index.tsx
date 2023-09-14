@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { HomeStackNavigatorParamList } from './types';
 import { NAVIGATION_ROUTES } from '../../constants/navigationRoutes';
 import { HomeScreen } from '../../screens/HomeScreen';
 import { drawText } from '../../constants/texts';
 import { TouchableOpacity } from 'react-native';
-import { goBack, navigate } from '../navigationUtils';
 import Arrow from '../../assets/Arrow.svg';
 import { COLORS } from '../../constants/colors';
-import { EMPTY_FUNCTION } from '../../constants/fallbacks';
+import { storage } from '../../storage';
+import { SignInScreen } from '../../screens/SignInScreen';
+import { navigate } from '../navigationUtils';
 
 const HomeStack = createNativeStackNavigator<HomeStackNavigatorParamList>();
 
@@ -23,6 +24,13 @@ const commonOptions = {
   },
 };
 
+const onPressBack = () => storage.removeItem('accessToken').then((token) => {
+  if (!token) {
+    // @ts-ignore
+    navigate(NAVIGATION_ROUTES.SIGN_IN_SCREEN);
+  }
+});
+
 export const HomeStackNavigator = () => {
 
   return (
@@ -33,7 +41,7 @@ export const HomeStackNavigator = () => {
           headerTitleAlign: 'center',
           headerTransparent: true,
           headerLeft: () => (
-            <TouchableOpacity accessibilityRole={'button'} onPress={EMPTY_FUNCTION}>
+            <TouchableOpacity accessibilityRole={'button'} onPress={onPressBack}>
               <Arrow />
             </TouchableOpacity>
           ),
@@ -41,6 +49,11 @@ export const HomeStackNavigator = () => {
         }}
         component={HomeScreen}
         name={NAVIGATION_ROUTES.HOME_SCREEN}
+      />
+      <HomeStack.Screen
+        options={{ headerShown: false }}
+        component={SignInScreen}
+        name={NAVIGATION_ROUTES.SIGN_IN_SCREEN}
       />
     </HomeStack.Navigator>
   );
