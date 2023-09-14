@@ -83,5 +83,6 @@ export const homeScreenStyles = StyleSheet.create<HomeScreenStyles>({
   button: {
     marginHorizontal: 20,
     marginBottom: 10,
+    width: '90%'
   },
 });
