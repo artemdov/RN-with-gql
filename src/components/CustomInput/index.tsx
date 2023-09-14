@@ -64,7 +64,7 @@ export const CustomInput: FC<TextInputProps & CustomInputProps> = (props) => {
           </TouchableOpacity>
         )}
       </View>
-      {isError && <ErrorText errorText={errorText} />}
+      {isError && errorText && <ErrorText errorText={errorText} />}
     </View>
   );
 };

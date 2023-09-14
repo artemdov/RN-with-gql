@@ -33,6 +33,7 @@ export const SignInView: FC<SignInViewProps> = (props) => {
           <View style={signInScreenStyles.wrapperInput}>
             <Text style={signInScreenStyles.titleText}>{buttonEnterText}</Text>
             <CustomInput
+              isError={isError}
               onChangeText={onChangeEmail}
               placeholderText={loginText}
               value={email}

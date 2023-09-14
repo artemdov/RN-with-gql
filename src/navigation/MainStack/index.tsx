@@ -8,8 +8,6 @@ import { TouchableOpacity } from 'react-native';
 import Arrow from '../../assets/Arrow.svg';
 import { COLORS } from '../../constants/colors';
 import { storage } from '../../storage';
-import { SignInScreen } from '../../screens/SignInScreen';
-import { navigate } from '../navigationUtils';
 
 const HomeStack = createNativeStackNavigator<HomeStackNavigatorParamList>();
 
