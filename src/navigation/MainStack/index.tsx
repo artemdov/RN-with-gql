@@ -45,11 +45,6 @@ export const HomeStackNavigator = () => {
         component={HomeScreen}
         name={NAVIGATION_ROUTES.HOME_SCREEN}
       />
-      <HomeStack.Screen
-        options={{ headerShown: false }}
-        component={SignInScreen}
-        name={NAVIGATION_ROUTES.SIGN_IN_SCREEN}
-      />
     </HomeStack.Navigator>
   );
 };
