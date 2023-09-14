@@ -24,12 +24,7 @@ const commonOptions = {
   },
 };
 
-const onPressBack = () => storage.removeItem('accessToken').then((token) => {
-  if (!token) {
-    // @ts-ignore
-    navigate(NAVIGATION_ROUTES.SIGN_IN_SCREEN);
-  }
-});
+const onPressBack = () => storage.removeItem('accessToken')
 
 export const HomeStackNavigator = () => {
 
