@@ -1,22 +1,17 @@
 import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
+import { COLORS } from '../../constants/colors';
 
 export type CustomInputWithLabelStyles = {
   error: ViewStyle;
-  errorWrapper: ViewStyle;
   eye: ViewStyle;
   input: ViewStyle;
   inputContainer: ViewStyle;
   labelText: TextStyle;
-  rootContainer: ViewStyle;
   wrapperInput: ViewStyle;
 };
 
 export const customInputWithLabelStyles = StyleSheet.create<CustomInputWithLabelStyles>({
-  rootContainer: {},
-  errorWrapper: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
+
   wrapperInput: {
     alignItems: 'center',
     flexDirection: 'row',
@@ -51,5 +46,6 @@ export const customInputWithLabelStyles = StyleSheet.create<CustomInputWithLabel
   },
   error: {
     borderWidth: 1,
+    borderColor: COLORS.RED_ERROR,
   },
 });

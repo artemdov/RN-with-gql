@@ -9,9 +9,10 @@ export const errorTextStyles = StyleSheet.create<ErrorTextStyles>({
     alignItems: 'center',
     color: 'red',
     fontSize: 12,
-    lineHeight: 18,
     fontStyle: 'normal',
-    width: '70%',
-    textAlign: 'right'
+    lineHeight: 18,
+    paddingVertical: 4,
+    textAlign: 'left',
+    width: '100%',
   },
 });

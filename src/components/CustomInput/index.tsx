@@ -30,11 +30,8 @@ export const CustomInput: FC<TextInputProps & CustomInputProps> = (props) => {
   } = props;
 
   return (
-    <View style={[customInputWithLabelStyles.rootContainer, rootContainerStyles]}>
-      <View style={customInputWithLabelStyles.errorWrapper}>
-        <Text style={[customInputWithLabelStyles.labelText, labelTextStyles]}>{label}</Text>
-        {isError && <ErrorText errorText={errorText} />}
-      </View>
+    <View style={rootContainerStyles}>
+      <Text style={[customInputWithLabelStyles.labelText, labelTextStyles]}>{label}</Text>
       <View
         style={[
           customInputWithLabelStyles.inputContainer,
@@ -67,6 +64,7 @@ export const CustomInput: FC<TextInputProps & CustomInputProps> = (props) => {
           </TouchableOpacity>
         )}
       </View>
+      {isError && <ErrorText errorText={errorText} />}
     </View>
   );
 };
